@@ -1,11 +1,31 @@
-<div class="grid">
-    <div class="col">
-        <div class="text-center p-3 border-round-sm bg-primary font-bold">1</div>
+<ng-container *ngIf="tasks$ | async as tasks">
+    <div class="grid">
+        <!-- To do -->
+        <div class="col">
+            <p-card header="To Do" [styleClass]="'ml-2 surface-200 border-round-2xl'">
+                <app-task *ngFor="let task of tasks.toDo" [task]="task"></app-task>
+                <ng-template pTemplate="footer">
+                    <app-create-task></app-create-task>
+                </ng-template>
+            </p-card>
+        </div>
+        <!-- In progress -->
+        <div class="col">
+            <p-card header="In Progress" [styleClass]="'surface-200 border-round-2xl'">
+                <app-task *ngFor="let task of tasks.inProgress" [task]="task"></app-task>
+                <ng-template pTemplate="footer">
+                    <app-create-task></app-create-task>
+                </ng-template>
+            </p-card>
+        </div>
+        <!-- Done -->
+        <div class="col">
+            <p-card header="Done" [styleClass]="'mr-2 surface-200 border-round-2xl'">
+                <app-task *ngFor="let task of tasks.done" [task]="task"></app-task>
+                <ng-template pTemplate="footer">
+                    <app-create-task></app-create-task>
+                </ng-template>
+            </p-card>
+        </div>
     </div>
-    <div class="col">
-        <div class="text-center p-3 border-round-sm bg-primary font-bold ">2</div>
-    </div>
-    <div class="col">
-        <div class="text-center p-3 border-round-sm bg-primary font-bold ">3</div>
-    </div>
-</div>
+</ng-container>

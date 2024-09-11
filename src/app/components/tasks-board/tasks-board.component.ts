@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ITask, TasksServiceService } from 'src/app/services/tasks-service.service';
 
 @Component({
   selector: 'app-tasks-board',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./tasks-board.component.scss']
 })
 export class TasksBoardComponent {
+  constructor(
+    private tasksService: TasksServiceService
+  ){}
 
+  tasks$ = this.tasksService.getTasks();
 }

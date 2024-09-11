@@ -1,0 +1,46 @@
+{
+  "tasks": {
+    "toDo": [
+      {
+        "id": 517757189388461,
+        "title": "Create Task",
+        "description": "Create a new task",
+        "status": "Pending",
+        "priority": "High",
+        "asignedTo": "Lesiv Lyubomir",
+        "createdAt": "2024-09-11T00:25:23.817Z"
+      },
+      {
+        "id": 225634560038266,
+        "title": "Create Task",
+        "description": "Create a new task",
+        "status": "Pending",
+        "priority": "High",
+        "asignedTo": "Lesiv Lyubomir",
+        "createdAt": "2024-09-11T00:25:31.488Z"
+      }
+    ],
+    "inProgress": [
+      {
+        "id": "2",
+        "title": "Add Label",
+        "description": "Add new label",
+        "status": "In Progress",
+        "priority": "Low",
+        "asignedTo": "Lesiv Lyubomir",
+        "createdAt": "2022-01-05"
+      }
+    ],
+    "done": [
+      {
+        "id": "3",
+        "title": "Add Modal",
+        "description": "Add new modal",
+        "status": "Done",
+        "priority": "Medium",
+        "asignedTo": "Lesiv Lyubomir",
+        "createdAt": "2022-01-05"
+      }
+    ]
+  }
+}

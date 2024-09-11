@@ -7,6 +7,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { MenuItemsComponent } from './menu-items/menu-items.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TaskComponent } from './task/task.component';
+import { CreateTaskComponent } from './create-task/create-task.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +17,15 @@ import { MenuItemsComponent } from './menu-items/menu-items.component';
     TasksBoardComponent,
     NavBarComponent,
     DashboardComponent,
-    MenuItemsComponent
+    MenuItemsComponent,
+    TaskComponent,
+    CreateTaskComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    PrimeNgModule
+    PrimeNgModule,
+    HttpClientModule
   ],
   exports: [
     SideBarComponent,
