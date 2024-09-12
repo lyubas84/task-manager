@@ -1,20 +1,44 @@
 import { Component, Input } from '@angular/core';
-import { ITask } from 'src/app/services/tasks-service.service';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { ITask, IUser, TasksService } from 'src/app/services/tasks.service';
 
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
-  styleUrls: ['./task.component.scss']
+  styleUrls: ['./task.component.scss'],
+  providers: [ConfirmationService, MessageService]
 })
 export class TaskComponent {
+    constructor(
+        public taskService: TasksService,
+        private confirmationService: ConfirmationService, 
+        private messageService: MessageService
+    ) {}
+    
   @Input() task!: ITask;
+  @Input() users!: IUser[];
 
   modifyTask(task: ITask): void {
-    console.log('Task modified', task);
+      this.taskService.showTaskForm.next(true);
+      this.taskService.taskToModifySubject.next(task);
   }
 
-  deleteTask(task: ITask): void {
-    console.log('Task deleted', task);
+  deleteTask(event: Event, task: ITask): void {
+    this.confirmationService.confirm({
+        target: event.target as EventTarget,
+        message: 'Are you sure that you want to delete task?',
+        icon: 'pi pi-exclamation-triangle',
+        accept: () => {
+            this.taskService.removeTask(task.id);
+        },
+        reject: () => {
+            this.messageService.add({ severity: 'error', summary: 'Rejected', detail: 'Task was not deleted' });
+        }
+    });
+  }
+
+  findAvatar(name: string): string {
+    return this.users.find(user => user.name === name)?.avatar || '';
   }
 
   getTaskIconClass(task: ITask): string {

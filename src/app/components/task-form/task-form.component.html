@@ -1,0 +1,44 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <div class="grid">
+        <div class="col-6">
+            <div class="flex flex-column gap-2">
+                <label htmlFor="title">Title</label>
+                <input type="text" pInputText id="title" aria-describedby="title" formControlName="title" />
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="flex flex-column gap-2">
+                <label htmlFor="status">Status</label>
+                <p-dropdown [options]="statusList" formControlName="status" optionLabel="label" 
+                    [showClear]="true" placeholder="Select" [styleClass]="'w-12'" optionValue="value">
+                </p-dropdown>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="flex flex-column gap-2">
+                <label htmlFor="priority">Priority</label>
+                <p-dropdown [options]="priorityList" formControlName="priority" optionLabel="label" 
+                    [showClear]="true" placeholder="Select" [styleClass]="'w-12'" optionValue="value">
+                </p-dropdown>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="flex flex-column gap-2">
+                <label htmlFor="asignedTo">Asign to</label>
+                <p-dropdown [options]="nameList" formControlName="asignedTo" 
+                    [showClear]="true" placeholder="Select" [styleClass]="'w-12'">
+                </p-dropdown>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="flex flex-column gap-2">
+                <label htmlFor="description">Description</label>
+                <textarea rows="5" cols="30" pInputTextarea formControlName="description"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-content-between align-items-center mt-8">
+        <button pButton label="Cancel" (click)="closeModal()" class="p-button-danger"></button>
+        <button pButton type="submit" label="Submit" [disabled]="taskForm.invalid"></button>
+    </div>
+</form>

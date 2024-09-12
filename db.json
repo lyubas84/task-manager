@@ -1,46 +1,49 @@
 {
-  "tasks": {
-    "toDo": [
-      {
-        "id": 517757189388461,
-        "title": "Create Task",
-        "description": "Create a new task",
-        "status": "Pending",
-        "priority": "High",
-        "asignedTo": "Lesiv Lyubomir",
-        "createdAt": "2024-09-11T00:25:23.817Z"
-      },
-      {
-        "id": 225634560038266,
-        "title": "Create Task",
-        "description": "Create a new task",
-        "status": "Pending",
-        "priority": "High",
-        "asignedTo": "Lesiv Lyubomir",
-        "createdAt": "2024-09-11T00:25:31.488Z"
-      }
-    ],
-    "inProgress": [
-      {
-        "id": "2",
-        "title": "Add Label",
-        "description": "Add new label",
-        "status": "In Progress",
-        "priority": "Low",
-        "asignedTo": "Lesiv Lyubomir",
-        "createdAt": "2022-01-05"
-      }
-    ],
-    "done": [
-      {
-        "id": "3",
-        "title": "Add Modal",
-        "description": "Add new modal",
-        "status": "Done",
-        "priority": "Medium",
-        "asignedTo": "Lesiv Lyubomir",
-        "createdAt": "2022-01-05"
-      }
-    ]
-  }
+  "users": [
+    {
+      "avatar": "https://primefaces.org/cdn/primeng/images/demo/avatar/ionibowcher.png",
+      "name": "Ioni Bowcher"
+    },
+    {
+      "avatar": "https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png",
+      "name": "Amy Elsner"
+    },
+    {
+      "avatar": "https://primefaces.org/cdn/primeng/images/demo/avatar/asiyajavayant.png",
+      "name": "Asiya Javayant"
+    },
+    {
+      "avatar": "https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png",
+      "name": "Xuxue Feng"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "m0yhuqvn-zoup13dcic",
+      "title": "asdfas",
+      "description": "asdfa",
+      "status": "done",
+      "priority": "high",
+      "asignedTo": "Asiya Javayant",
+      "createdAt": "2024-09-11T23:30:48.083Z"
+    },
+    {
+      "id": "m0yj9xml-rc2sbpko91a",
+      "title": "fhfgy",
+      "description": "sdfsd",
+      "status": "to do",
+      "priority": "high",
+      "asignedTo": "Ioni Bowcher",
+      "createdAt": "2024-09-12T00:10:36.285Z"
+    },
+    {
+      "id": "m0yk0tq5-sedvqtyujo",
+      "title": "asdf",
+      "description": "asdfasdg",
+      "status": "in progress",
+      "priority": "medium",
+      "asignedTo": "Asiya Javayant",
+      "createdAt": "2024-09-12T00:31:30.941Z"
+    }
+  ]
 }

@@ -1,9 +1,22 @@
-<ng-container *ngIf="tasks$ | async as tasks">
+<ng-container *ngIf="loaderService.loaderSubject.getValue()">
+    <div class="grid">
+        <div class="col">
+            <app-skeleton></app-skeleton>
+        </div>
+        <div class="col">
+            <app-skeleton></app-skeleton>
+        </div>
+        <div class="col">
+            <app-skeleton></app-skeleton>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="!loaderService.loaderSubject.getValue()">
     <div class="grid">
         <!-- To do -->
         <div class="col">
             <p-card header="To Do" [styleClass]="'ml-2 surface-200 border-round-2xl'">
-                <app-task *ngFor="let task of tasks.toDo" [task]="task"></app-task>
+                <app-task *ngFor="let task of filterTasksByStatus('to do')" [task]="task" [users]="users"></app-task>
                 <ng-template pTemplate="footer">
                     <app-create-task></app-create-task>
                 </ng-template>
@@ -12,7 +25,7 @@
         <!-- In progress -->
         <div class="col">
             <p-card header="In Progress" [styleClass]="'surface-200 border-round-2xl'">
-                <app-task *ngFor="let task of tasks.inProgress" [task]="task"></app-task>
+                <app-task *ngFor="let task of filterTasksByStatus('in progress')" [task]="task" [users]="users"></app-task>
                 <ng-template pTemplate="footer">
                     <app-create-task></app-create-task>
                 </ng-template>
@@ -21,7 +34,7 @@
         <!-- Done -->
         <div class="col">
             <p-card header="Done" [styleClass]="'mr-2 surface-200 border-round-2xl'">
-                <app-task *ngFor="let task of tasks.done" [task]="task"></app-task>
+                <app-task *ngFor="let task of filterTasksByStatus('done')" [task]="task" [users]="users"></app-task>
                 <ng-template pTemplate="footer">
                     <app-create-task></app-create-task>
                 </ng-template>

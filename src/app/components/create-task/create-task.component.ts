@@ -1,28 +1,22 @@
-import { Component } from '@angular/core';
-import { TasksServiceService } from 'src/app/services/tasks-service.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { TasksService } from 'src/app/services/tasks.service';
 
 @Component({
   selector: 'app-create-task',
   templateUrl: './create-task.component.html',
   styleUrls: ['./create-task.component.scss']
 })
+
 export class CreateTaskComponent {
   constructor(
-    private taskService: TasksServiceService
+    public taskService: TasksService
   ) {}
 
-  createTask(): void {
-    let task = {
-      id: Math.floor(Math.random() * 1000000000000000),
-      title: 'Create Task',
-      description: 'Create a new task',
-      status: 'Pending',
-      priority: 'High',
-      asignedTo: 'Lesiv Lyubomir',
-      createdAt: new Date()
-    }
-    console.log(task);
-    this.taskService.addTask(task).subscribe();
+  showTaskForm: boolean = false;
+
+  showForm() {
+    this.taskService.showTaskForm.next(true);
   }
 
 }
