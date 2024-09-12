@@ -14,6 +14,7 @@ import { ToastModule } from 'primeng/toast';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { MessagesModule } from 'primeng/messages';
 import { SkeletonModule } from 'primeng/skeleton';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
   declarations: [],
@@ -32,6 +33,7 @@ import { SkeletonModule } from 'primeng/skeleton';
     DividerModule,
     CardModule,
     ChipModule,
+    MenuModule,
     DialogModule,
     ToastModule
 ]

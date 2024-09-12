@@ -20,8 +20,8 @@
   "tasks": [
     {
       "id": "m0yhuqvn-zoup13dcic",
-      "title": "asdfas",
-      "description": "asdfa",
+      "title": "Modal",
+      "description": "Create a modal",
       "status": "done",
       "priority": "high",
       "asignedTo": "Asiya Javayant",
@@ -29,8 +29,8 @@
     },
     {
       "id": "m0yj9xml-rc2sbpko91a",
-      "title": "fhfgy",
-      "description": "sdfsd",
+      "title": "Filter",
+      "description": "Create a filter",
       "status": "to do",
       "priority": "high",
       "asignedTo": "Ioni Bowcher",
@@ -38,12 +38,21 @@
     },
     {
       "id": "m0yk0tq5-sedvqtyujo",
-      "title": "asdf",
-      "description": "asdfasdg",
+      "title": "Table",
+      "description": "Create a table",
       "status": "in progress",
       "priority": "medium",
-      "asignedTo": "Asiya Javayant",
+      "asignedTo": "Amy Elsner",
       "createdAt": "2024-09-12T00:31:30.941Z"
+    },
+    {
+      "id": "m0z3nnns-n2xv7wdn2km",
+      "title": "new task",
+      "description": "just do it!",
+      "status": "to do",
+      "priority": "medium",
+      "asignedTo": "Xuxue Feng",
+      "createdAt": "2024-09-12T09:41:08.872Z"
     }
   ]
 }

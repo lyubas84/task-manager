@@ -1,3 +1,4 @@
+<!-- Display skeleton loaders while data is being fetched -->
 <ng-container *ngIf="loaderService.loaderSubject.getValue()">
     <div class="grid">
         <div class="col">
@@ -11,6 +12,8 @@
         </div>
     </div>
 </ng-container>
+
+<!-- Display task boards when data is available -->
 <ng-container *ngIf="!loaderService.loaderSubject.getValue()">
     <div class="grid">
         <!-- To do -->

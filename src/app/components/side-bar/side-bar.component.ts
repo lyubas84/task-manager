@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-side-bar',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class SideBarComponent {
     sidebarVisible = false;
+    items: MenuItem[] | undefined;
+    ngOnInit() {
+        this.items = [
+            {
+                label: 'User',
+                icon: 'pi pi-fw pi-user',
+            },
+            {
+                label: 'Settings',
+                icon: 'pi pi-fw pi-cog'
+            }
+        ];
+    }
 }

@@ -1,9 +1,12 @@
+<!-- Span element that acts as a button to show the task form -->
 <span class="cursor-pointer" (click)="showForm()">
     <i class="pi pi-plus" style="font-size: 1rem"></i> Add Task
 </span>
 
+<!-- Dialog for adding a new task -->
 <p-dialog header="Add New Task" [visible]="taskService.showTaskForm.getValue()" 
     [modal]="true" [style]="{ width: '50vw', height: '75vh'}" 
     [draggable]="false" [resizable]="false" [closable]="false">
+    <!-- Task form component -->
     <app-task-form></app-task-form>
 </p-dialog>

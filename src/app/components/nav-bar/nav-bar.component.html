@@ -1,16 +1,19 @@
-
+<!-- Navbar menu section -->
 <div class="bg-primary-700 pt-3">
     <div class="flex justify-content-between align-items-center flex-wrap">
         <div class="ml-3">
             <app-side-bar></app-side-bar>
         </div>
         <div>
+            <!-- Menu items -->
             <app-menu-items></app-menu-items>
         </div>
+        <!-- Task search -->
         <div class="mr-3">
             <span class="p-input-icon-left">
                 <i class="pi pi-search"></i>
-                <input type="text" pInputText placeholder="Search" [(ngModel)]="search" />
+                <input type="text" pInputText placeholder="Search" [(ngModel)]="search" 
+                    (ngModelChange)="onSearch($event)" />
             </span>
         </div>
     </div>

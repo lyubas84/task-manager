@@ -14,7 +14,6 @@ export class CreateTaskComponent {
   ) {}
 
   showTaskForm: boolean = false;
-
   showForm() {
     this.taskService.showTaskForm.next(true);
   }
